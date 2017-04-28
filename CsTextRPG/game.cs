@@ -35,12 +35,14 @@ namespace CsTextRPG
 		public int def;
 		public int dex;
 		public int agi;
-		public string clas;
+		public string clas = "test";
 
 		public void Rouge()
 		{
             string clas = "Rouge";
+            Console.WriteLine(clas);
             Console.WriteLine("rouge class");
+            Console.WriteLine("exp: {0}",exp);
 			int hp = 25;
 			int chp = 25;
 			int m = 15;
