@@ -11,7 +11,8 @@ namespace CsTextRPG
 			Character player = new Character();
 			player.name = name;
 			player.Rouge();
-			Console.WriteLine("Hello {0} the {1}", player.name, player.clas); 
+			Console.WriteLine("Hello {0} the {1}", player.name, player.clas);
+            Console.ReadLine();
 
 		}
 
@@ -38,7 +39,8 @@ namespace CsTextRPG
 
 		public void Rouge()
 		{
-			Console.WriteLine("rouge class");
+            string clas = "Rouge";
+            Console.WriteLine("rouge class");
 			int hp = 25;
 			int chp = 25;
 			int m = 15;
@@ -48,7 +50,7 @@ namespace CsTextRPG
 			int de = 10;
 			int dex = 20;
 			int agi = 25;
-			string clas = "Rouge";
+			
 
 		}
 	}

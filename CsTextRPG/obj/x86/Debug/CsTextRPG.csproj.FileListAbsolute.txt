@@ -1,0 +1,5 @@
+C:\Users\gules\Documents\GitHub\CsTextRPG\CsTextRPG\bin\Debug\CsTextRPG.exe
+C:\Users\gules\Documents\GitHub\CsTextRPG\CsTextRPG\bin\Debug\CsTextRPG.pdb
+C:\Users\gules\Documents\GitHub\CsTextRPG\CsTextRPG\obj\x86\Debug\CsTextRPG.csprojResolveAssemblyReference.cache
+C:\Users\gules\Documents\GitHub\CsTextRPG\CsTextRPG\obj\x86\Debug\CsTextRPG.exe
+C:\Users\gules\Documents\GitHub\CsTextRPG\CsTextRPG\obj\x86\Debug\CsTextRPG.pdb
