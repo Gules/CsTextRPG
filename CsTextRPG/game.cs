@@ -52,6 +52,7 @@ namespace CsTextRPG
 			int de = 10;
 			int dex = 20;
 			int agi = 25;
+            
 			
 
 		}
