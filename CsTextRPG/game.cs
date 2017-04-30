@@ -2,22 +2,28 @@ using System;
 
 namespace CsTextRPG
 {
-	class MainClass
-	{
-		public static void Main(string[] args)
-		{
-			Console.WriteLine("What is your name?");
-			string name = Console.ReadLine();
-			Character player = new Character();
-			player.name = name;
-			player.Rouge();
-			Console.WriteLine("Hello {0} the {1}", player.name, player.clas);
+    class MainClass
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+            Character player = new Character();
+            player.name = name;
+            player.Rouge();
+            Console.WriteLine("Hello {0} the {1}", player.name, player.clas);
+            Quit();
+
+        }
+        public static void Quit()
+        {
+            Console.WriteLine("press any key to exit");
             Console.ReadLine();
+        }
 
-		}
+    }
 
-	}
-	class Character
+    class Character
 	{
 		public int lvl = 1;
 		public int sp = 10;
@@ -53,8 +59,6 @@ namespace CsTextRPG
 			int dex = 20;
 			int agi = 25;
             
-			
-
 		}
 	}
 }
