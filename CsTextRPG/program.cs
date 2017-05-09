@@ -39,11 +39,15 @@ namespace CsTextRPG
             {
                 SadConsole.Settings.ToggleFullScreen();
             }
+            if (SadConsole.Global.KeyboardState.IsKeyReleased(Microsoft.Xna.Framework.Input.Keys.Escape))
+            {
+                SadConsole.Game.Instance.Exit();
+            }
         }
 
         private static void Init()
         {
-            // Any custom loading and prep. We will use a sample console for now
+            /* Any custom loading and prep. We will use a sample console for now
 
             Console startingConsole = new Console(Width, Height);
             startingConsole.FillWithRandomGarbage();
@@ -51,6 +55,10 @@ namespace CsTextRPG
             startingConsole.Print(6, 5, "Hello from SadConsole", ColorAnsi.CyanBright);
 
             // Set our new console as the thing to render and process
+            SadConsole.Global.CurrentScreen = startingConsole;
+            */
+            SadConsole.Console startingConsole = new Console(Width, Height);
+            startingConsole.Print(Width / 2, Height / 2, "@", ColorAnsi.CyanBright);
             SadConsole.Global.CurrentScreen = startingConsole;
         }
     }
