@@ -13,6 +13,9 @@ namespace CsTextRPG
 
         static void Main(string[] args)
         {
+            //creating player
+            Character player = new Character();
+
             // Setup the engine and creat the main window.
             SadConsole.Game.Create("IBM.font", Width, Height);
 
@@ -60,6 +63,11 @@ namespace CsTextRPG
             SadConsole.Console startingConsole = new Console(Width, Height);
             startingConsole.Print(Width / 2, Height / 2, "@", ColorAnsi.CyanBright);
             SadConsole.Global.CurrentScreen = startingConsole;
+        }
+        class Character
+        {
+            public int posX = Width / 2;
+            public int posY = Height / 2;
         }
     }
 }
