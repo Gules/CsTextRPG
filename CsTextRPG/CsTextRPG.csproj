@@ -51,8 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="game.cs" />
+    <Compile Include="Consoles\MapConsole.cs" />
     <Compile Include="Entities\EntityBase.cs" />
     <Compile Include="Entities\Player.cs" />
+    <Compile Include="Map.cs" />
     <Compile Include="MapObjects\Floor.cs" />
     <Compile Include="MapObjects\TileBase.cs" />
     <Compile Include="MapObjects\Wall.cs" />

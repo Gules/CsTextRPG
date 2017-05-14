@@ -8,8 +8,9 @@ namespace CsTextRPG
     class Program
     {
 
-        public const int Width = 80;
-        public const int Height = 25;
+        public const int ScreenWidth = 80;
+        public const int ScreenHeight = 25;
+        public static Consoles.MapConsole MapConsole;
 
         static void Main(string[] args)
         {
@@ -17,7 +18,7 @@ namespace CsTextRPG
             Character player = new Character();
 
             // Setup the engine and creat the main window.
-            SadConsole.Game.Create("IBM.font", Width, Height);
+            SadConsole.Game.Create("IBM.font", ScreenWidth, ScreenHeight);
 
             // Hook the start event so we can add consoles to the system.
             SadConsole.Game.OnInitialize = Init;
@@ -59,15 +60,29 @@ namespace CsTextRPG
 
             // Set our new console as the thing to render and process
             SadConsole.Global.CurrentScreen = startingConsole;
-            */
-            SadConsole.Console startingConsole = new Console(Width, Height);
-            startingConsole.Print(Width / 2, Height / 2, "@", ColorAnsi.CyanBright);
+            //my stuff
+            SadConsole.Console startingConsole = new Console(ScreenWidth, ScreenHeight);
+            startingConsole.Print(ScreenWidth / 2, ScreenHeight / 2, "@", ColorAnsi.CyanBright);
             SadConsole.Global.CurrentScreen = startingConsole;
+            */
+            // Create the map
+            Map mapData = new Map(100, 100);
+
+            // Position the player near the middle of the screen
+            mapData.Player.Position = new Point(ScreenWidth / 2, ScreenHeight / 2);
+
+            // Create our map console and add it to SadConsole
+            MapConsole = new Consoles.MapConsole(mapData);
+
+            SadConsole.Global.CurrentScreen.Children.Add(MapConsole);
+
+            // The map console will now get the keyboard hook triggered
+            SadConsole.Global.FocusedConsoles.Set(MapConsole);
         }
         class Character
         {
-            public int posX = Width / 2;
-            public int posY = Height / 2;
+            public int posX = ScreenWidth / 2;
+            public int posY = ScreenHeight / 2;
         }
     }
 }
